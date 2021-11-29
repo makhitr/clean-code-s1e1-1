@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -12,7 +12,7 @@ body {
   text-align: right;
 }
 
-.header img {
+.header__image {
   width: 100%;
 }
 
@@ -44,22 +44,22 @@ body {
   display: flex;
 }
 
-ul {
+.list__tasks {
   margin: 0;
   padding: 0px;
 }
 
-li,
-h3 {
+.task__item,
+.section__title {
   list-style: none;
 }
 
-input,
-button {
+.task__input,
+.button {
   outline: none;
 }
 
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -69,13 +69,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-h3,
-label[for="section__task_new"] {
+.section__title,
+.section__task__label[for="section__task_new"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -85,7 +85,7 @@ label[for="section__task_new"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task__input[type="text"] {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -98,76 +98,75 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task__input[type="text"]:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="section__task_new"] {
+.section__task__label[for="section__task_new"] {
   display: block;
   margin: 0 0 20px;
 }
 
-input#section__task_new {
+.task__input#section__task_new {
   width: 318px;
 }
 
 /* Task list */
-li {
+.task__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-li>* {
+.task__item > * {
   vertical-align: middle;
 }
 
-li>input[type="checkbox"] {
+.task__item > .task__input[type="checkbox"] {
   margin: 0 10px;
 }
 
-li>label {
+.task__item > .section__task__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li>input[type="text"] {
+.task__item >.task__input[type="text"] {
   width: 226px;
 }
 
-button.button_delete img {
+.button.button_delete .image_delete {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.button_delete img:hover {
+.button.button_delete .image_delete:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#list__tasks_completed label {
+.list__tasks#list__tasks_completed .section__task__label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.list__tasks  .task__item .task__input[type="text"] {
   display: none;
 }
 
-ul li.task__edit-mode input[type="text"] {
+.list__tasks  .task__item.task__edit-mode .task__input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.task__edit-mode label {
+.list__tasks  .task__item.task__edit-mode .section__task__label {
   display: none;
 }
